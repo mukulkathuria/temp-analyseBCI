@@ -1,0 +1,13 @@
+pandas
+numpy
+matplotlib
+shap
+scikit-learn
+ipykernel
+Office365-REST-Python-Client
+openpyxl
+seaborn
+imbalanced-learn
+statsmodels
+dalex
+nbformat
