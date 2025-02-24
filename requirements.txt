@@ -12,3 +12,7 @@ statsmodels
 dalex
 nbformat
 ipywidgets
+lightgbm
+graphviz
+streamlit
+dill
