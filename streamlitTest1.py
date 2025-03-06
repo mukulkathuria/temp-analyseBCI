@@ -27,15 +27,14 @@ df = df.drop(unwanted_columns, axis=1)
 to_predicted = df.iloc[0]
 customercolumns = ['Lead_Source', 'First_Time_Buyer', 'Age', 'Gender', 'Income', 'OEM_Loyalty_Program']
 
-
+customermodel = load('bcimodels.pkl')
 model1values = to_predicted[customercolumns]
-df_customermodel = load('customermodel.pkl')
+df_customermodel = customermodel['customer']['model']
 predictedcustomer = df_customermodel.predict(model1values).to_numpy()[0]
-exp1 = load('customerexplainer.pkl')
+exp1 = customermodel['customer']['explainer']
 breakdown = exp1.predict_parts(to_predicted[customercolumns], type='break_down', label='Customer Profile')
-
 st.write(f"Prediction: {predictedcustomer * 100}")
-
+st.table(breakdown.result)
 fig = breakdown.plot(show=False, title='Aditi Joshi')
 st.plotly_chart(fig)
 
