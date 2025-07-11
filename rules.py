@@ -15,7 +15,7 @@ bci_rules = [
     {"value": "Dealership_Engagement", "condition": "Medium/High"},
     {"value": "Experience_With_Sales_Rep", "condition": "Positive"},
     {"value": "Delivery_Date_Status", "condition": "On-Time"},
-    {"value": "Customer_Satisfaction_Score", "condition": ">7"},
+    {"value": "Customer_Satisfaction_Score", "condition": ">6"},
 ]
 
 def evaluate_condition(value, condition):
